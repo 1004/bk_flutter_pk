@@ -35,9 +35,21 @@ class _WidgetLifePageBState extends State<WidgetLifePageB> with WidgetsBindingOb
     }
   }
 
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("Life->B: didChangeDependencies");
+  }
+
+  @override
+  void deactivate() {
+    super.deactivate();
+    print("Life->B: deactivate");
+  }
 
   @override
   Widget build(BuildContext context) {
+    print("Life->B: build");
     return Scaffold(
       appBar: AppBar(
         title: Text('生命周期页面B'),
