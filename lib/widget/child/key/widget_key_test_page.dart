@@ -20,6 +20,7 @@ class _WidgetKeyTestPageState extends State<WidgetKeyTestPage> {
   List<Widget>  colorsWidget;
   @override
   void initState() {
+
     colorsWidget = [
       // ClickBox(key: ValueKey(2),),
       // ClickBox(key: ValueKey(1),),
@@ -55,6 +56,7 @@ class _WidgetKeyTestPageState extends State<WidgetKeyTestPage> {
     super.initState();
   }
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
