@@ -1,3 +1,4 @@
+import 'package:bk_flutter_pk/state/state_manager_page.dart';
 import 'package:bk_flutter_pk/widget/widget_home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -72,6 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ItemWidget("Widget",(){
               Navigator.of(context).push(MaterialPageRoute(builder: (context){
                 return WidgetHomePage();
+              }));
+            }),
+            ItemWidget("状态管理",(){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                return StateManagerPage();
               }));
             })
           ],
