@@ -1,5 +1,6 @@
 import 'package:bk_flutter_pk/main.dart';
 import 'package:bk_flutter_pk/widget/child/key/widget_key_test_page.dart';
+import 'package:bk_flutter_pk/widget/child/layout/layout_page.dart';
 import 'package:flutter/material.dart';
 
 import 'child/life/widget_life_test_page.dart';
@@ -32,6 +33,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("常用Widget", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return WidgetKeyTestPage();
+              }));
+            }),
+            ItemWidget("布局原理", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return LayoutPage();
               }));
             }),
           ],
