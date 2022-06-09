@@ -5,6 +5,7 @@ import 'package:bk_flutter_pk/widget/child/template_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/dialog/dialog_ui_widget_test.dart';
 import 'package:bk_flutter_pk/widget/child/ui/intercept/intercept_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/location/location_ui_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'child/life/widget_life_test_page.dart';
@@ -57,6 +58,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("标签(Chip)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ChipUiWidget(title: "标签(Chip)",);
+              }));
+            }),
+            ItemWidget("位置(Align)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return LocationUiWidget(title: "位置(Align)",);
               }));
             }),
           ],
