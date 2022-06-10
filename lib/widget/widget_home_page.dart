@@ -2,6 +2,7 @@ import 'package:bk_flutter_pk/main.dart';
 import 'package:bk_flutter_pk/widget/child/key/widget_key_test_page.dart';
 import 'package:bk_flutter_pk/widget/child/layout/layout_page.dart';
 import 'package:bk_flutter_pk/widget/child/template_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/anim/anim_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/dialog/dialog_ui_widget_test.dart';
 import 'package:bk_flutter_pk/widget/child/ui/intercept/intercept_ui_widget.dart';
@@ -63,6 +64,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("位置(Align)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return LocationUiWidget(title: "位置(Align)",);
+              }));
+            }),
+            ItemWidget("动画(AlignTransition)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return AnimUIWidget(title: "动画(AlignTransition)",);
               }));
             }),
           ],
