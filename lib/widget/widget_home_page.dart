@@ -1,4 +1,5 @@
 import 'package:bk_flutter_pk/main.dart';
+import 'package:bk_flutter_pk/widget/bus/bus_house_jevel_widget.dart';
 import 'package:bk_flutter_pk/widget/child/key/widget_key_test_page.dart';
 import 'package:bk_flutter_pk/widget/child/layout/layout_page.dart';
 import 'package:bk_flutter_pk/widget/child/template_ui_widget.dart';
@@ -26,6 +27,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            ItemWidget("盘圆-钻石项目", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BusHouseLevelWidget(title: "盘圆-钻石项目",);
+              }));
+            }),
             ItemWidget("Widget Key", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return WidgetKeyTestPage();
