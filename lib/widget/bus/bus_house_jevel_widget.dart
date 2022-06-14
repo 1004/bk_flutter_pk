@@ -23,12 +23,7 @@ class _BusHouseLevelWidgetState extends State<BusHouseLevelWidget> {
   Widget _buildBody() {
     return Container(
       color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          _houseZsWidget(),
-        ],
-      ),
+      child: _houseZsWidget(),
     );
   }
 
@@ -127,7 +122,6 @@ class _BusHouseLevelWidgetState extends State<BusHouseLevelWidget> {
                       maxLines: 1,
                       style: TextStyle(
                         fontSize: 13,
-                        height: 1.3,
                         color: Color(0xFF999999),
                       ),
                     ),
