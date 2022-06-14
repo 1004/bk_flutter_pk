@@ -116,26 +116,29 @@ class _BusHouseLevelWidgetState extends State<BusHouseLevelWidget> {
               ),
             ),
             Spacer(),
-            Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(right: 2),
-                  child: Text(
-                    '入选楼盘',
-                    maxLines: 1,
-                    style: TextStyle(
-                      fontSize: 13,
-                      height: 1.3,
-                      color: Color(0xFF999999),
+            Visibility(
+              visible: true,
+              child: Row(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(right: 2),
+                    child: Text(
+                      '入选楼盘',
+                      maxLines: 1,
+                      style: TextStyle(
+                        fontSize: 13,
+                        height: 1.3,
+                        color: Color(0xFF999999),
+                      ),
                     ),
                   ),
-                ),
-                Image.asset(
-                  "assets/icon_arrow_right_66.png",
-                  width: 12,
-                  height: 12,
-                )
-              ],
+                  Image.asset(
+                    "assets/icon_arrow_right_66.png",
+                    width: 12,
+                    height: 12,
+                  )
+                ],
+              ),
             ),
           ],
         ),
