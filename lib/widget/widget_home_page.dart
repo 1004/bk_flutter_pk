@@ -25,6 +25,7 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
         title: Text("Widget"),
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: <Widget>[
             ItemWidget("盘圆-钻石项目", () {
