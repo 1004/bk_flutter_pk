@@ -80,6 +80,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.of(context).push(MaterialPageRoute(builder: (context){
                 return StateManagerPage();
               }));
+            }),
+            ItemWidget("测试问题",(){
+              String dest = "okb";
+              int ok = int.tryParse(dest);
+              if((ok ?? 0) >10){
+                print('okd');
+              }
+              int de = ok ?? 0;
+              print("值等于 $de");
             })
           ],
         ),

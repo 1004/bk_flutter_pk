@@ -116,7 +116,7 @@ class _BusHouseLevelWidgetState extends State<BusHouseLevelWidget> {
               child: Row(
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(right: 2),
+                    padding: EdgeInsets.only(right: 2,bottom: 3),
                     child: Text(
                       '入选楼盘',
                       maxLines: 1,
