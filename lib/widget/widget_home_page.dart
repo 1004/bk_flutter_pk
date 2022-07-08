@@ -5,6 +5,7 @@ import 'package:bk_flutter_pk/widget/child/layout/layout_page.dart';
 import 'package:bk_flutter_pk/widget/child/template_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/anim/anim_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/contrain/contrain_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/dialog/dialog_ui_widget_test.dart';
 import 'package:bk_flutter_pk/widget/child/ui/intercept/intercept_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/location/location_ui_widget.dart';
@@ -76,6 +77,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("动画(AlignTransition)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return AnimUIWidget(title: "动画(AlignTransition)",);
+              }));
+            }),
+            ItemWidget("约束(BoxConstraints)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return ConstrainUiWidget(title: "约束(BoxConstraints)",);
               }));
             }),
           ],
