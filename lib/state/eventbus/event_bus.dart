@@ -40,7 +40,8 @@ class EventBus {
   // }
 
   void sendMsg(String value) {
-    _dataSink.add(value);
+    // _dataSink.add(value);
+    _streamController.add(value);
   }
 
   void registerObserver(String key, ChangeObserver changeObserver) {
