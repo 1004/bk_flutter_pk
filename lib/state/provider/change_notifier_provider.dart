@@ -16,7 +16,7 @@ class ChangeNotifierProvider<T extends MyChangeNotifier>
     final provider =
         listen
         ? context.dependOnInheritedWidgetOfExactType<InheritedProvider<T>>()
-        : context.getElementForInheritedWidgetOfExactType<InheritedProvider<T>>() as InheritedProvider<T>;
+        : context.getElementForInheritedWidgetOfExactType<InheritedProvider<T>>().widget as InheritedProvider<T>;
     return provider.data;
   }
 

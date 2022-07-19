@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:bk_flutter_pk/state/provider/change_notifier.dart';
 import 'package:bk_flutter_pk/state/provider/example/Item.dart';
 
+/// 具备数据共享和数据通知的bean
 class CartModel extends MyChangeNotifier {
   final List<Item> _items = [];
 

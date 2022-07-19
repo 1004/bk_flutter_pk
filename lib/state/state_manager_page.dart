@@ -1,5 +1,7 @@
 import 'package:bk_flutter_pk/main.dart';
+import 'package:bk_flutter_pk/state/eventbus/event_bus_page.dart';
 import 'package:bk_flutter_pk/state/inherited/inherited_widget_test_page.dart';
+import 'package:bk_flutter_pk/state/provider/example/provider_page.dart';
 import 'package:flutter/material.dart';
 
 class StateManagerPage extends StatefulWidget {
@@ -26,7 +28,12 @@ class _StateManagerPageState extends State<StateManagerPage> {
         }),
         ItemWidget("状态-- 简易Provider", () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return InheritedWidgetTestPage();
+            return ProviderPage();
+          }));
+        }),
+        ItemWidget("eventbus-Stream", () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return EventBusPageTest();
           }));
         }),
       ],

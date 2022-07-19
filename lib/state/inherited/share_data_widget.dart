@@ -6,7 +6,7 @@ class ShareDataWidget extends InheritedWidget {
   ShareDataWidget({Key key, @required this.data, @required Widget child})
       : super(key:key,child:child);
 
-  //定义一个便捷的方法，方便子树中获取widget恭喜数据
+  //定义一个便捷的方法，方便子树中获取widget共享数据
   static ShareDataWidget of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
   }
