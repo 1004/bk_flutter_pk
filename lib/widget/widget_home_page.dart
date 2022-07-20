@@ -12,6 +12,7 @@ import 'package:bk_flutter_pk/widget/child/ui/location/location_ui_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'child/life/widget_life_test_page.dart';
+import 'child/ui/button/button_ui_widget.dart';
 
 class WidgetHomePage extends StatefulWidget {
   @override
@@ -82,6 +83,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("约束(BoxConstraints)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ConstrainUiWidget(title: "约束(BoxConstraints)",);
+              }));
+            }),
+            ItemWidget("按钮(Button)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return ButtonUiWidget(title: "按钮(Button)",);
               }));
             }),
           ],
