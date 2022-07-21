@@ -132,56 +132,105 @@ class _ButtonUiWidgetState extends State<ButtonUiWidget> {
               },
             ),
             'DropdownButton'),
-        _item(PopupMenuButton<String>(
-          shape: RoundedRectangleBorder(
-            side: BorderSide(
-              color: Colors.orange
+        _item(
+            PopupMenuButton<String>(
+              shape: RoundedRectangleBorder(
+                side: BorderSide(color: Colors.orange),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              elevation: 5,
+              padding: EdgeInsets.all(5),
+              color: Colors.red,
+              itemBuilder: (context) {
+                return <PopupMenuEntry<String>>[
+                  PopupMenuItem<String>(
+                    value: '语文',
+                    child: Text('语文'),
+                  ),
+                  PopupMenuItem<String>(
+                    value: '数学',
+                    child: Text('数学'),
+                  ),
+                  PopupMenuItem<String>(
+                    value: '外语',
+                    child: Text('外语'),
+                  ),
+                ];
+              },
+              onSelected: (v) {},
+              initialValue: '数学',
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          elevation: 5,
-          padding: EdgeInsets.all(5),
-          color: Colors.red,
-          itemBuilder: (context) {
-            return <PopupMenuEntry<String>>[
-              PopupMenuItem<String>(
-                value: '语文',
-                child: Text('语文'),
-              ),
-              PopupMenuItem<String>(
-                value: '数学',
-                child: Text('数学'),
-              ),
-              PopupMenuItem<String>(
-                value: '外语',
-                child: Text('外语'),
-              ),
-            ];
-          },
-          onSelected: (v){
-
-          },
-          initialValue: '数学',
-        ), 'PopupMenuButton'),
-        _item(IconButton(
-          icon: Icon(Icons.person),
-          tooltip: "图标",
-          iconSize: 40,
-          color: Colors.indigo,
-          onPressed: (){},
-        ), 'IconButton'),
+            'PopupMenuButton'),
+        _item(
+            IconButton(
+              icon: Icon(Icons.person),
+              tooltip: "图标",
+              iconSize: 40,
+              color: Colors.indigo,
+              onPressed: () {},
+            ),
+            'IconButton'),
         _item(BackButton(), 'BackButton'),
         _item(CloseButton(), 'CloseButton'),
-        _item(ButtonBar(
-          mainAxisSize: MainAxisSize.max,
-          alignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(),
-            RaisedButton(),
-            RaisedButton(),
-            RaisedButton(),
-          ],
-        ), 'ButtonBar'),
+        _item(
+            ButtonBar(
+              mainAxisSize: MainAxisSize.max,
+              alignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RaisedButton(),
+                RaisedButton(),
+                RaisedButton(),
+                RaisedButton(),
+              ],
+            ),
+            'ButtonBar'),
+        _item(
+            Container(
+              width: 200,
+              height: 200,
+              child: Banner(
+                message: "老谢",
+                child: Container(
+                  color: Colors.yellow,
+                ),
+                location: BannerLocation.topEnd,
+              ),
+            ),
+            'Banner'),
+        _item(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Baseline(
+                  baseline: 50,
+                  baselineType: TextBaseline.alphabetic,
+                  child: Text(
+                    'XXXkkkX',
+                    style: TextStyle(
+                        fontSize: 20, textBaseline: TextBaseline.alphabetic),
+                  ),
+                ),
+                Baseline(
+                  baseline: 50,
+                  baselineType: TextBaseline.alphabetic,
+                  child: Container(
+                    width: 30,
+                    height: 30,
+                    color: Colors.red,
+                  ),
+                ),
+                Baseline(
+                  baseline: 50,
+                  baselineType: TextBaseline.alphabetic,
+                  child: Text(
+                    'RYRYx',
+                    style: TextStyle(
+                        fontSize: 35, textBaseline: TextBaseline.alphabetic),
+                  ),
+                )
+              ],
+            ),
+            'Baseline'),
       ],
     );
   }

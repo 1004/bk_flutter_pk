@@ -7,6 +7,7 @@ import 'package:bk_flutter_pk/widget/child/ui/anim/anim_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/contrain/contrain_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/dialog/dialog_ui_widget_test.dart';
+import 'package:bk_flutter_pk/widget/child/ui/filter/back_drop_filter_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/intercept/intercept_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/location/location_ui_widget.dart';
 import 'package:flutter/material.dart';
@@ -88,6 +89,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("按钮(Button)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ButtonUiWidget(title: "按钮(Button)",);
+              }));
+            }),
+            ItemWidget("模糊(BackdropFilter)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BackDropFitlerUiWidget(title: "模糊(BackdropFilter)",);
               }));
             }),
           ],
