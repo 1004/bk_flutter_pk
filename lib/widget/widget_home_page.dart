@@ -4,6 +4,8 @@ import 'package:bk_flutter_pk/widget/child/key/widget_key_test_page.dart';
 import 'package:bk_flutter_pk/widget/child/layout/layout_page.dart';
 import 'package:bk_flutter_pk/widget/child/template_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/anim/anim_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/bar/bottom_app_bar_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/bar/bottom_navigation_bar_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/border/border_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/contrain/contrain_ui_widget.dart';
@@ -100,6 +102,16 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("边框(border)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return BorderUiWidget(title: "边框(border)",);
+              }));
+            }),
+            ItemWidget("底部导航(bottomAppBar)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BottomAppBarUiWidget();
+              }));
+            }),
+            ItemWidget("底部菜单(BottomNavigationBar)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BottomNavigatioBarUiWidget();
               }));
             }),
           ],
