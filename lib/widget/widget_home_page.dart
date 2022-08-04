@@ -7,6 +7,7 @@ import 'package:bk_flutter_pk/widget/child/ui/anim/anim_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/bar/bottom_app_bar_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/bar/bottom_navigation_bar_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/border/border_ui_widget.dart';
+import 'package:bk_flutter_pk/widget/child/ui/build/BuildUIWidget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/chip/chip_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/contrain/contrain_ui_widget.dart';
 import 'package:bk_flutter_pk/widget/child/ui/dialog/dialog_ui_widget_test.dart';
@@ -112,6 +113,11 @@ class _WidgetHomePageState extends State<WidgetHomePage> {
             ItemWidget("底部菜单(BottomNavigationBar)", () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return BottomNavigatioBarUiWidget();
+              }));
+            }),
+            ItemWidget("子Widget(Builder)", () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return BuildUiWidgetTest(title: "Builder",);
               }));
             }),
           ],
